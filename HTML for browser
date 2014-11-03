@@ -1,0 +1,38 @@
+<html><head>
+<script>
+    function save()
+                {
+    				var fieldValue = document.getElementById("textfield").value;
+    				localStorage.setItem("text", fieldValue);
+    			}
+    			function load()
+    			{
+                    var storedValue = localStorage.getItem("text");
+    				if (storedValue)
+    				{
+    					document.getElementById("textfield").value = storedValue;
+    				}
+    			}
+                function jkl()
+                {
+                    //localStorage.clear();
+                    document.getElementById("textfield").value = "";
+                    localStorage.removeItem("text");
+                    //document.getElementById("textfield").value = " ";
+                }
+</script>
+</head>
+<body onload= "load()">
+       
+            <textarea id="textfield" rows="5" cols="auto"></textarea>
+            <input type="button" value="save" onclick="save()" data-appbuilder-object="button"
+            class="">
+            <input type="button" value="remove" onclick="jkl()" data-appbuilder-object="button"
+            class="">
+        
+    
+    
+    
+</div>
+</body>
+</html>
